@@ -1,0 +1,12 @@
+#ifdef OPLUS_FEATURE_LMVIBRATOR
+#Baoquan.Lai@Tech.BSP.Vibrator, 2021/05/26, move qti vibrator service to odm
+service vendor.qti.vibrator /odm/bin/hw/vendor.qti.hardware.vibrator.service
+    class hal
+    user system
+    group system input
+#else
+#service vendor.qti.vibrator /vendor/bin/hw/vendor.qti.hardware.vibrator.service
+#   class hal
+#   user system
+#   group system input
+#endif
